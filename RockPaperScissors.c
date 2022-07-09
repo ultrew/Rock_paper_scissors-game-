@@ -1,3 +1,4 @@
+//A Rock,paper,scissors game in c programming.
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -32,17 +33,17 @@ int rps(char you, char comp){
    int main() 
    {
     char you,comp;
-    srand(time(NULL)); //NULL and 0 are same
-    int n = rand()%100 + 1; // + 1 is here for take random num after +1 in privious num
-
-    if(n<33){
+    srand(time(NULL));
+    int n = rand()%100 + 1;
+  
+    if(n < 33){
         comp = 'r';
     }
-    else if(n>33 && n<66){
-        comp='p';
+    else if(n > 33 && n < 66){
+        comp = 'p';
     }
     else{
-        comp='s';
+        comp = 's';
     }
     printf("Enetr r for rock, p for paper, s scissor :\n");
     scanf("%c",&you);
@@ -61,6 +62,5 @@ int rps(char you, char comp){
     else{
         printf("Invalid. Please try again :\n");
     }
-    printf("The random num is %d",n);
     return 0;
 }
